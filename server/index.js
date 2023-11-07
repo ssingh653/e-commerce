@@ -19,4 +19,10 @@ app.get("/", (req, res) => {
   res.json("test ok");
 });
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT} `));
+app.listen(PORT, () => {
+  try {
+    console.log(`Server running on port ${PORT} `);
+  } catch (error) {
+    console.log(`Error is ${error}`);
+  }
+});
